@@ -13,7 +13,7 @@ const partialsPaths = path.join(myPath, 'templates/partials')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 //setting views and patials
 app.set('views', viewsPath)
@@ -71,7 +71,6 @@ app.get('*', (req, res)=>{
 
 })
 
-port = 3000
 app.listen(port, ()=>{
     console.log('server running on port %d.', port)
 })
